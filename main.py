@@ -38,8 +38,19 @@ KEYWORDS = [
 
 def send_telegram(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-    requests.post(url, data={"chat_id": CHAT_ID, "text": message})
+    r = requests.post(
+        url,
+        data={
+            "chat_id": CHAT_ID,
+            "text": message
+        },
+        timeout=30
+    )
+    print("TELEGRAM STATUS:", r.status_code)
+    print("TELEGRAM RESPONSE:", r.text)
+    r.raise_for_status()
 
+    
 def main():
         send_telegram("✅ TEST: GitHub Actions çalışıyor, Telegram bağlantısı OK")
     r = requests.get(URL, timeout=30)
