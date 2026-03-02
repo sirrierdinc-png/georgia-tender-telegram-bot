@@ -1,0 +1,29 @@
+name: Georgia Tender Monitor
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # 6 saatte bir çalışır
+  workflow_dispatch:       # Elle çalıştırma için
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: Run tender bot
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: ${{ secrets.TG_CHAT }}
+        run: |
+          python main.py
