@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import os
-
+SENT_FILE = "sent_ids.txt"
 TELEGRAM_TOKEN = os.getenv("TG_TOKEN")
 CHAT_ID = os.getenv("TG_CHAT")
 
@@ -21,10 +21,7 @@ KEYWORDS = [
     "HDPE pipeline", "ductile iron pipeline", "steel pipeline",
     "gravity pipeline", "pressure pipeline",
 
-    "road", "highway", "bypass road", "ring road",
-    "road construction", "road rehabilitation", "road reconstruction",
-    "asphalt", "pavement",
-
+   
     "bridge", "viaduct", "overpass", "underpass", "culvert",
     "tunnel", "road tunnel", "railway tunnel",
 
