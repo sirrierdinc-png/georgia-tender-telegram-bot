@@ -41,6 +41,7 @@ def send_telegram(message):
     requests.post(url, data={"chat_id": CHAT_ID, "text": message})
 
 def main():
+        send_telegram("✅ TEST: GitHub Actions çalışıyor, Telegram bağlantısı OK")
     r = requests.get(URL, timeout=30)
     soup = BeautifulSoup(r.text, "html.parser")
 
