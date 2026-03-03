@@ -8,32 +8,41 @@ CHAT_ID = os.getenv("TG_CHAT")
 URL = "https://tenders.procurement.gov.ge/public/?lang=en"
 
 KEYWORDS = [
-    "water", "potable water", "drinking water", "water supply", "water distribution",
-    "wastewater", "waste water", "sewage", "sewer", "sewerage", "stormwater", "storm water",
-    "drainage", "flood protection", "flood control",
+"water","potable water","drinking water","water supply","water distribution","water network","water pipeline","water transmission","water mains",
 
-    "treatment plant", "water treatment plant", "wastewater treatment plant",
-    "WWTP", "WTP", "STP", "effluent treatment", "biological treatment",
-    "membrane treatment", "filtration plant",
-    "pumping station", "booster station", "lift station",
+"wastewater","waste water","sewage","sewer","sewerage","sewer system","sewer network","sewer pipeline","stormwater","storm water","storm sewer","drainage","rainwater drainage","flood protection","flood control",
 
-    "pipeline", "pipe network", "pipeline construction", "pipe installation",
-    "HDPE pipeline", "ductile iron pipeline", "steel pipeline",
-    "gravity pipeline", "pressure pipeline",
+"treatment plant","water treatment plant","wastewater treatment plant","wwtp","wtp","stp","effluent treatment plant","biological treatment","membrane treatment","filtration plant","pumping station","booster station","lift station",
 
-   
-    "bridge", "viaduct", "overpass", "underpass", "culvert",
-    "tunnel", "road tunnel", "railway tunnel",
+"pipeline","pipe network","pipeline construction","pipe installation","hdpe pipeline","ductile iron pipeline","steel pipeline","gravity pipeline","pressure pipeline","transmission line","distribution line",
 
-    "railway", "rail line", "railway infrastructure",
-    "tramway", "tram line",
-    "metro", "subway",
+"road","roadway","highway","expressway","bypass road","ring road","urban road","rural road","road construction","road rehabilitation","road reconstruction","road upgrading","asphalt","asphalt works","pavement","rigid pavement","flexible pavement",
 
-    "school", "hospital",
-    "public building", "government building",
+"bridge","viaduct","overpass","underpass","interchange","junction","culvert","box culvert",
 
-    "infrastructure", "civil works", "engineering works",
-    "earthworks", "excavation", "trenching", "retaining wall"
+"tunnel","road tunnel","railway tunnel","underpass construction",
+
+"railway","railroad","rail line","railway line","railway infrastructure","railway construction","railway rehabilitation","railway station","rail station","rail depot","depot",
+
+"tramway","tram","tram line","tramway line","tramway construction","tramway infrastructure",
+
+"metro","subway","underground railway","metro line","metro station",
+
+"school","primary school","secondary school","high school","kindergarten","preschool","college","university","campus","education building",
+
+"hospital","general hospital","medical center","clinic","health facility","healthcare building","emergency hospital","trauma center",
+
+"public building","government building","administrative building","municipal building","city hall","ministry building","courthouse","justice building","police station","fire station",
+
+"social facility","community center","sports complex","stadium","arena",
+
+"industrial building","warehouse","logistics center","terminal building","airport building","airport infrastructure","hangar",
+
+"infrastructure","public infrastructure","municipal infrastructure","urban infrastructure","utility works","underground utilities","utility relocation",
+
+"construction","construction works","building construction","building works","civil works","civil engineering works","engineering works",
+
+"earthworks","excavation","trenching","backfilling","retaining wall","slope stabilization","ground improvement"
 ]
 
 def send_telegram(message: str):
